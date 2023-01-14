@@ -1,34 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Teslo Shop App
 
-## Getting Started
+Sigue estos pasos para dejar esta app funcionando localmente
 
-First, run the development server:
+## Modulos de node
 
-```bash
-npm run dev
-# or
-yarn dev
+Instalar los modulos de node
+
+```
+yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Levantar MongoDB localmente
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Primero necesitamos, la imagen de mongo
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```
+docker pull mongo
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Levantamos nuestra instancia de Docker y ejecutamos el comando en consola
 
-## Learn More
+```
+docker-compose up -d
+```
 
-To learn more about Next.js, take a look at the following resources:
+El -d, significa **datached**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+MongoDB URL Local:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+mongodb://localhost:27017/teslodb
+```
 
-## Deploy on Vercel
+## API Reference
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+LLenar la BD con información de productos y 2 usuarios (Only Dev)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```http
+  GET /api/seed
+```
+
+### Usuarios (Seed)
+ ```
+    {
+      name: 'Juanito Admin',
+      email: 'admin@gmail.com',
+      password: 123456,
+      role: 'admin',
+    },
+    {
+      name: 'Juanito Cliente',
+      email: 'client@gmail.com',s
+      password: 123456,
+      role: 'client',
+    },
+ ```
+
+## .ENV
+
+- Cambiar el nombre del archivo .env.example a .env.development y rellenar con los campos solicitados
