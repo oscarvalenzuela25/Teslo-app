@@ -10,9 +10,6 @@ const HomePage: NextPage = () => {
 
   if (isError) return <div>failed to load</div>;
 
-  console.log(process.env.NEXTAUTH_SECRET);
-  console.log(process.env.NEXTAUTH_URL);
-
   return (
     <ShopLayout
       title="Teslo-shop - Home"
