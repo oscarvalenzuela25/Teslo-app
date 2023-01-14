@@ -14,7 +14,10 @@ export default function App({
   pageProps: { session, ...pageProps },
 }: AppProps) {
   return (
-    <SessionProvider session={session}>
+    <SessionProvider
+      session={session}
+      basePath={process.env.NEXTAUTH_URL || ''}
+    >
       <PayPalScriptProvider
         options={{ 'client-id': process.env.NEXT_PUBLIC_PAYPAL_CLIENT || '' }}
       >
