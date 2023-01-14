@@ -59,7 +59,7 @@ export const authOptions = {
     updateAge: 86400,
   },
 
-  secret: process.env.NEXT_PUBLIC_SECRET || '',
+  secret: process.env.SECRET || '',
 
   // Callbacks
   callbacks: {
