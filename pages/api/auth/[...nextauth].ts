@@ -41,11 +41,6 @@ export const authOptions = {
     // ...add more providers here
   ],
 
-  // Si seteas NEXTAUTH_SECRET no es necesario el jwt.secret
-  //   jwt: {
-  //     // secret: process.env.NEXTAUTH_SECRET
-  //   },
-
   // custom Pages, cuando entras a las paginas de signIn por defecto te va a redirigier a los que tengas especificados aqui
   pages: {
     signIn: '/auth/login',
@@ -57,6 +52,8 @@ export const authOptions = {
     strategy: 'jwt' as SessionStrategy,
     updateAge: 86400,
   },
+
+  secret: process.env.NEXTAUTH_SECRET || '',
 
   // Callbacks
   callbacks: {
