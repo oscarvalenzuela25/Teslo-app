@@ -213,7 +213,7 @@ const AddressPage = () => {
 //   // if (!token || !tokenIsValid) {
 //   //   return {
 //   //     redirect: {
-//   //       destination: 'auth/login?p=/checkout/address',
+//   //       destination: 'authorization/login?p=/checkout/address',
 //   //       permanent: false,
 //   //     },
 //   //   };
@@ -227,7 +227,7 @@ const AddressPage = () => {
 //   if (!session) {
 //     return {
 //       redirect: {
-//         destination: '/auth/login?p=/checkout/address',
+//         destination: '/authorization/login?p=/checkout/address',
 //         permanent: false,
 //       },
 //     };

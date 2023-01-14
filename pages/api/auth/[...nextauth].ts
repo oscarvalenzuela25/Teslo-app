@@ -43,8 +43,8 @@ export const authOptions = {
 
   // custom Pages, cuando entras a las paginas de signIn por defecto te va a redirigier a los que tengas especificados aqui
   pages: {
-    signIn: '/auth/login',
-    newUser: '/auth/register',
+    signIn: '/authorization/login',
+    newUser: '/authorization/register',
   },
 
   session: {

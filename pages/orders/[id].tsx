@@ -203,7 +203,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   if (!session) {
     return {
       redirect: {
-        destination: `/auth/login?p='orders/${id}`,
+        destination: `/authorization/login?p='orders/${id}`,
         permanent: false,
       },
     };

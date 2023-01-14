@@ -135,7 +135,9 @@ const RegisterPage: NextPage = () => {
 
             <Grid item xs={12} display="flex" justifyContent="center">
               <NextLink
-                href={`/auth/login${destination && '?p=' + destination}`}
+                href={`/authorization/login${
+                  destination && '?p=' + destination
+                }`}
                 passHref
                 legacyBehavior
               >

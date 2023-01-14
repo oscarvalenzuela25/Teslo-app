@@ -43,6 +43,7 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
   // };
 
   useEffect(() => {
+    console.log({ data, status });
     if (status === 'authenticated') {
       dispatch({
         type: '[Auth] - Login',
