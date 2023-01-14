@@ -21,7 +21,6 @@ const AUTH_INITIAL_STATE: AuthState = {
 export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, AUTH_INITIAL_STATE);
   const { data, status } = useSession();
-  console.log({ data, status });
 
   // Autenticacion personalizada
   // const router = useRouter();
@@ -43,7 +42,6 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
   // };
 
   useEffect(() => {
-    console.log({ data, status });
     if (status === 'authenticated') {
       dispatch({
         type: '[Auth] - Login',
