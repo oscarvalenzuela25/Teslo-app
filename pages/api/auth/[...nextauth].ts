@@ -59,8 +59,6 @@ export const authOptions = {
     updateAge: 86400,
   },
 
-  secret: process.env.SECRET || '',
-
   // Callbacks
   callbacks: {
     async jwt({ token, account, user }: any) {
