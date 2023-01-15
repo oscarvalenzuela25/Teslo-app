@@ -22,7 +22,7 @@ import { getOrderById } from '../../database/dbOrders';
 import { IOrder } from '../../interfaces/order';
 import countries from '../../utils/countries';
 import { PayPalButtons } from '@paypal/react-paypal-js';
-import tesloApi from '../../api/tesloApi';
+import tesloApi from '../../service/tesloApi';
 import { useRouter } from 'next/router';
 
 export type OrderResponseBody = {

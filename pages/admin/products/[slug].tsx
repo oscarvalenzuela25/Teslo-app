@@ -28,7 +28,7 @@ import AdminLayout from '../../../components/layouts/AdminLayout';
 import { IGender, IProduct, ISize, IType } from '../../../interfaces/products';
 import { getProductBySlug } from '../../../database/dbProduct';
 import { useForm } from 'react-hook-form';
-import tesloApi from '../../../api/tesloApi';
+import tesloApi from '../../../service/tesloApi';
 import { useRouter } from 'next/router';
 import Product from '../../../models/Product';
 

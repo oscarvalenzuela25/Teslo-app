@@ -6,7 +6,7 @@ import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import { Grid, MenuItem, Select } from '@mui/material';
 import { IUser, Role } from '../../interfaces/user';
 import useSWR from 'swr';
-import tesloApi from '../../api/tesloApi';
+import tesloApi from '../../service/tesloApi';
 
 const validRoles = [
   {
