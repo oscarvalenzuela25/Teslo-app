@@ -17,7 +17,7 @@ import ShopLayout from '../../components/layouts/ShopLayout';
 import NextLink from 'next/link';
 import { CreditCardOff, CreditScoreOutlined } from '@mui/icons-material';
 import { unstable_getServerSession } from 'next-auth';
-import { authOptions } from '../../api/auth/[...nextauth]';
+import { authOptions } from '../api/auth/[...nextauth]';
 import { getOrderById } from '../../database/dbOrders';
 import { IOrder } from '../../interfaces/order';
 import countries from '../../utils/countries';
