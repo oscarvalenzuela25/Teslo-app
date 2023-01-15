@@ -130,7 +130,7 @@ export const getStaticPaths: GetStaticPaths = async ctx => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params as { slug: string };
-  const product = await await getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
 
   if (!product) {
     return {
