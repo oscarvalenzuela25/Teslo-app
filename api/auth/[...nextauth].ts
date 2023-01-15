@@ -2,10 +2,7 @@ import NextAuth, { SessionStrategy } from 'next-auth';
 import GithubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import {
-  checkUserEmailPassword,
-  oAuthToDbUser,
-} from '../../../database/dbUsers';
+import { checkUserEmailPassword, oAuthToDbUser } from '../../database/dbUsers';
 
 export const authOptions = {
   providers: [

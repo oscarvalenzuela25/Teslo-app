@@ -4,7 +4,7 @@ import { connect, disconnect } from '../../../database/db';
 import { IOrder } from '../../../interfaces/order';
 import Order from '../../../models/Order';
 import Product from '../../../models/Product';
-import { authOptions } from '../auth/[...nextauth]';
+import { authOptions } from '../../../api/auth/[...nextauth]';
 
 type Data =
   | {

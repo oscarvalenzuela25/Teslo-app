@@ -5,7 +5,7 @@ import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import NextLink from 'next/link';
 import { GetServerSideProps, NextPage } from 'next';
 import { unstable_getServerSession } from 'next-auth';
-import { authOptions } from '../api/auth/[...nextauth]';
+import { authOptions } from '../../api/auth/[...nextauth]';
 import { getOrdersByUser } from '../../database/dbOrders';
 import { IOrder } from '../../interfaces/order';
 
