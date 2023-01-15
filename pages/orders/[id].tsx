@@ -211,15 +211,14 @@ export const getServerSideProps: GetServerSideProps = async ({
 
   const order = await getOrderById(id.toString());
 
-  // test
-  // if (!order || order.user !== session.user._id) {
-  //   return {
-  //     redirect: {
-  //       destination: `/orders/history`,
-  //       permanent: false,
-  //     },
-  //   };
-  // }
+  if (!order || order.user !== session.user._id) {
+    return {
+      redirect: {
+        destination: `/orders/history`,
+        permanent: false,
+      },
+    };
+  }
 
   return {
     props: {

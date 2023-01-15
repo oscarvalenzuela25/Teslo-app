@@ -102,9 +102,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
     };
   }
 
-  // test
-  // const orders = await getOrdersByUser(session?.user?._id!);
-  const orders = await getOrdersByUser('1');
+ const orders = await getOrdersByUser(session?.user?._id!);
 
   return {
     props: { orders },
