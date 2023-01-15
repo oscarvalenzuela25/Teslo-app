@@ -139,7 +139,7 @@ const SummaryPage = () => {
 //   // if (!token || !tokenIsValid) {
 //   //   return {
 //   //     redirect: {
-//   //       destination: '/authorization/login?p=/checkout/address',
+//   //       destination: '/auth/login?p=/checkout/address',
 //   //       permanent: false,
 //   //     },
 //   //   };
@@ -153,7 +153,7 @@ const SummaryPage = () => {
 //   if (!session) {
 //     return {
 //       redirect: {
-//         destination: '/authorization/login?p=/checkout/summary',
+//         destination: '/auth/login?p=/checkout/summary',
 //         permanent: false,
 //       },
 //     };

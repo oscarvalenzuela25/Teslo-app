@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { getToken } from 'next-auth/jwt';
 
-const authPaths = ['/authorization/login', '/authorization/register'];
+const authPaths = ['/auth/login', '/auth/register'];
 const needSessionPaths = ['/checkout/address', '/checkout/summary'];
 
 export async function middleware(req: NextRequest) {
@@ -22,7 +22,7 @@ export async function middleware(req: NextRequest) {
   if (needSessionPaths.includes(req.nextUrl.pathname)) {
     if (!session) {
       return NextResponse.redirect(
-        new URL(`/authorization/login?p=${req.nextUrl.pathname}`, req.url)
+        new URL(`/auth/login?p=${req.nextUrl.pathname}`, req.url)
       );
     }
   }
@@ -30,7 +30,7 @@ export async function middleware(req: NextRequest) {
   if (req.nextUrl.pathname.includes('/admin')) {
     if (!session) {
       return NextResponse.redirect(
-        new URL(`/authorization/login?p=${req.nextUrl.pathname}`, req.url)
+        new URL(`/auth/login?p=${req.nextUrl.pathname}`, req.url)
       );
     }
     const validRoles = ['admin'];
@@ -46,7 +46,7 @@ export const config = {
   matcher: [
     '/checkout/address',
     '/checkout/summary',
-    '/authorization/login',
+    '/auth/login',
     '/auth/register',
     '/admin/:path*',
   ],

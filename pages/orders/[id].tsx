@@ -203,7 +203,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   if (!session) {
     return {
       redirect: {
-        destination: `/authorization/login?p='orders/${id}`,
+        destination: `/auth/login?p='orders/${id}`,
         permanent: false,
       },
     };
@@ -211,14 +211,15 @@ export const getServerSideProps: GetServerSideProps = async ({
 
   const order = await getOrderById(id.toString());
 
-  if (!order || order.user !== session.user._id) {
-    return {
-      redirect: {
-        destination: `/orders/history`,
-        permanent: false,
-      },
-    };
-  }
+  // test
+  // if (!order || order.user !== session.user._id) {
+  //   return {
+  //     redirect: {
+  //       destination: `/orders/history`,
+  //       permanent: false,
+  //     },
+  //   };
+  // }
 
   return {
     props: {
