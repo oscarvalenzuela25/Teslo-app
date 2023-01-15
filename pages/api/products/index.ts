@@ -25,6 +25,22 @@ export default async function handler(
 const getProducts = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   const { gender = 'all' } = req.query;
 
+console.log(process.env.MONGO_URL);
+console.log(process.env.NEXT_PUBLIC_TAX_RATE);
+console.log(process.env.HOST_NAME);
+console.log(process.env.JWT_SECRET_SEED);
+console.log(process.env.NEXTAUTH_SECRET);
+console.log(process.env.NEXTAUTH_URL);
+console.log(process.env.GITHUB_ID);
+console.log(process.env.GITHUB_SECRET);
+console.log(process.env.GOOGLE_CLIENT_ID);
+console.log(process.env.GOOGLE_CLIENT_SECRET);
+console.log(process.env.NEXT_PUBLIC_PAYPAL_CLIENT);
+console.log(process.env.PAYPAL_SECRET);
+console.log(process.env.PAYPAL_OAUTH_URL);
+console.log(process.env.PAYPAL_ORDERS_URL);
+console.log(process.env.CLOUDINARY_URL);
+
   let condition = {};
   if (
     gender !== 'all' &&
