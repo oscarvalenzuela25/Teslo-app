@@ -13,8 +13,8 @@ export async function middleware(req: NextRequest) {
 
   if (authPaths.includes(req.nextUrl.pathname)) {
     if (session) {
-      const params = req.nextUrl.search.split('?p=');
-      const newUrl = params ? decodeURIComponent(params[1]) : '/';
+      const params = req.nextUrl.searchParams.get('p');
+      const newUrl = params || '/';
       return NextResponse.redirect(new URL(newUrl, req.url));
     }
   }
